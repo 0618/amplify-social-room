@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { ControlPanel } from './ControlPanel'
 import { CursorPanel } from './CursorPanel'
+import { PictureManager } from './PictureManager'
 import { defaultRoom, generateRandomEmoji } from './utils'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <>
       <div className='cursor-panel'>
         <div className='info-panel'>
+          <PictureManager roomId={currentRoomId} />
           <span>
             Move cursor around to broadcast cursor position to others in the room.
             <br />
